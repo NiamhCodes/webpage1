@@ -1,0 +1,92 @@
+/*color pallette
+pale blue: #D5E9F1
+off-white: #FCF8FF
+Purple-blue: #9B89B3*/
+
+
+/*Setup based on Kevin Powell advice*/
+*,
+*:: before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6; ./*little extra space*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;/*prevents touching on side, could also use padding*/
+  max-width: 65em; /*65x16 is 112pixels*/
+  margin: 0 auto;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block; /*makes photo background transparent again*/
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .5em 1.25em;
+  color: var(--clr-accent, #FCF8FF);
+  font-weight: 700;
+  font-size: 1.25em;
+  background: var(--clr-accent, #9B89B3);
+  /* hover over button action: */
+  border-radius: .25em;
+  transition: transform 250ms ease-in-out,
+    opacity 175ms linear;
+
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, 5vw+1rem, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+ 
+  .hero {
+  text-align: center;
+  padding: 15em 0;
+  background: url("https://raw.githubusercontent.com/NiamhCodes/watercolorshopdemo/main/148882735_10220886964536533_2379227334554303115_o.jpg");
+  radial-gradient();
+  background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.section-title {
+  text-align: center;
+  font-size: (clamp(2.5rem, calc(5vw+ 1rem), 4rem));
+  line-height: 1;
+  color: #9B89B3;
+}
