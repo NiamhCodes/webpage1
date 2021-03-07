@@ -1,0 +1,150 @@
+/*color pallette
+pale blue: #D5E9F1
+off-white: #FCF8FF
+Purple-blue: #9B89B3*/
+
+
+/*Setup based on Kevin Powell advice**/
+
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+body {
+  margin 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6; ./*little extra space*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+color: #FCF8FF;
+font-size: 55px;
+font-weight: 200%;
+}
+h2 {
+  color: #FCF8FF;
+ font-family: 'IBM Plex Serif', serif;
+ font-size: 25px;
+ font-weight: 150%;
+ font-style: italic;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+h3 {
+  margin: 0;
+}
+
+section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;/*prevents touching on side, could also use padding*/
+  max-width: 65em; /*65x16 is 112pixels*/
+  margin: 0 auto;
+}
+
+.split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap; /*all parents*/
+        flex-wrap: wrap; /*all children*/
+    -ms-flex-pack: center;
+        justify-content: center;    
+}
+
+.split > * {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    min-width: 15em;
+}
+
+
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block; /*makes photo background transparent again*/
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .25em 0.75em;
+  color: var(--clr-accent, #FCF8FF);
+  font-weight: 700;
+  font-size: 1.25em;
+  background: var(--clr-accent, #9B89B3);
+  /* hover over button action: */
+  border-radius: .2em;
+  /*-webkit-transition: opacity 250ms linear,transition: transform 250ms ease-in-out,
+    opacity 175ms linear;*/
+
+}
+
+.btn:hover,
+.btn:focus {
+ -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+opacity: 0.6;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw+1rem), 4rem);
+  line-height: 1;
+  color: #9B89B3;
+  text-transform: uppercase;
+}
+
+ 
+  .hero {
+  text-align: center;
+  opacity: 70%;
+  text-align: center;
+  padding: 25rem 0;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(../img/galaxy1.jpg);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #33354c;
+  }
+}
+
+
+
+
+.section-title {
+  text-align: center;
+  font-size: (clamp(2.5rem, calc(5vw+ 1rem), 4rem));
+  line-height: 1;
+  color: #9B89B3;
+}
+
+.featured {
+    background: #D5E9F1;
+}
+
+.featured__item {
+    display: block;
+    position: relative;
+    color: #FCF8FF;
+}
